@@ -29,8 +29,8 @@ workData <- mutate(workData, fullDate = as.POSIXct(paste(workData$Date,workData$
 ##Plot 3
 png(file="plot3.png",width=480, height=480)
 with(workData,plot(fullDate,Sub_metering_1,type="l",xlab="",ylab="Energy sub metering"))
-with(workData,lines(fullDate,workData$Sub_metering_2, type='l', col="red"))
-with(workData,lines(fullDate,workData$Sub_metering_3, type='l', col="blue"))
+with(workData,lines(fullDate,Sub_metering_2, type='l', col="red"))
+with(workData,lines(fullDate,Sub_metering_3, type='l', col="blue"))
 legend("topright", lty=1, col=c("black","blue","red"),legend=c("Sub_metering_1", "Sub_metering_2", "Sub-metering_3"))
 dev.off()
 

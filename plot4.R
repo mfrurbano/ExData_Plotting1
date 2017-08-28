@@ -34,8 +34,8 @@ par(mfcol=c(2,2))
 with(workData,plot(fullDate,Global_active_power,type="l",xlab="",ylab="Global Active Power"))
 ## Plot 2/4
 with(workData,plot(fullDate,Sub_metering_1,type="l",xlab="",ylab="Energy sub metering"))
-with(workData,lines(fullDate,workData$Sub_metering_2, type='l', col="red"))
-with(workData,lines(fullDate,workData$Sub_metering_3, type='l', col="blue"))
+with(workData,lines(fullDate,Sub_metering_2, type='l', col="red"))
+with(workData,lines(fullDate,Sub_metering_3, type='l', col="blue"))
 legend("topright", bty = "n", lty=1, cex=0.9, col=c("black","blue","red"),legend=c("Sub_metering_1", "Sub_metering_2", "Sub-metering_3"))
 ## Plot 3/4
 with(workData,plot(fullDate,Voltage,type="l",xlab="datetime"))
